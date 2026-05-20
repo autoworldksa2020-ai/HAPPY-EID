@@ -1,1 +1,34 @@
+@font-face {
+  font-family: "FFShamelSansBold";
+  src: url("fonts/ArbFONTS-FFShamelFamily-SansOneBold.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "FFShamelNormal";
+  src: url("fonts/FFShamelFamily-NormalUnique 2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FFShamelMedium";
+  src: url("fonts/FFShamelFamily-MediumUnique 2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FFShamelLight";
+  src: url("fonts/FFShamelFamily-LightUnique 2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CoHeadlineBold";
+  src: url("fonts/Co Headline W01 Bold 5.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "CoHeadlineRegular";
+  src: url("fonts/Co Headline W01 Regular 3.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CoHeadlineLight";
+  src: url("fonts/Co Headline W01 Light 5.otf") format("opentype");
+}
