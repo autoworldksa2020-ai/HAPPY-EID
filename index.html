@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoWorld Greeting Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="controls">
+
+  <input id="nameInput" placeholder="اكتب الاسم">
+  <input id="titleInput" placeholder="المسمى الوظيفي (اختياري)">
+
+  <label>حجم الاسم</label>
+  <input id="nameSize" type="range" min="8" max="30" value="18">
+
+  <label>حجم المسمى</label>
+  <input id="titleSize" type="range" min="8" max="30" value="14">
+
+  <label>لون النص</label>
+  <select id="textColor">
+    <option value="white">أبيض</option>
+    <option value="black">أسود</option>
+  </select>
+
+  <label>خط الاسم</label>
+  <select id="nameFont">
+    <option value="FFShamelSansBold">FF Shamel Sans Bold</option>
+    <option value="FFShamelNormal">FF Shamel Normal</option>
+    <option value="FFShamelMedium">FF Shamel Medium</option>
+    <option value="FFShamelLight">FF Shamel Light</option>
+    <option value="CoHeadlineBold">Co Headline Bold</option>
+    <option value="CoHeadlineRegular">Co Headline Regular</option>
+    <option value="CoHeadlineLight">Co Headline Light</option>
+  </select>
+
+  <label>خط المسمى الوظيفي</label>
+  <select id="titleFont">
+    <option value="CoHeadlineBold">Co Headline Bold</option>
+    <option value="CoHeadlineRegular">Co Headline Regular</option>
+    <option value="CoHeadlineLight">Co Headline Light</option>
+    <option value="FFShamelSansBold">FF Shamel Sans Bold</option>
+    <option value="FFShamelNormal">FF Shamel Normal</option>
+    <option value="FFShamelMedium">FF Shamel Medium</option>
+    <option value="FFShamelLight">FF Shamel Light</option>
+  </select>
+
+  <button onclick="toggleDrag()" id="dragButton">تفعيل تحريك النصوص</button>
+  <button onclick="downloadCard()">تحميل البطاقة</button>
+
+</div>
+
+<div class="card-wrapper">
+  <div class="card" id="card">
+    <img src="greeting-card.png" alt="Greeting Card">
+
+    <div id="nameText" class="text name">اسم الموظف</div>
+    <div id="titleText" class="text title"></div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

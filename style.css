@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "FFShamelSansBold";
+  src: url("./fonts/ArbFONTS-FFShamelFamily-SansOneBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FFShamelNormal";
+  src: url("./fonts/FFShamelFamily-NormalUnique%202.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FFShamelMedium";
+  src: url("./fonts/FFShamelFamily-MediumUnique%202.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FFShamelLight";
+  src: url("./fonts/FFShamelFamily-LightUnique%202.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CoHeadlineBold";
+  src: url("./fonts/Co%20Headline%20W01%20Bold%205.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "CoHeadlineRegular";
+  src: url("./fonts/Co%20Headline%20W01%20Regular%203.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CoHeadlineLight";
+  src: url("./fonts/Co%20Headline%20W01%20Light%205.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 20px;
+}
+
+.controls {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  background: #007580;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#dragButton.active {
+  background: #222;
+}
+
+.card-wrapper {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1080 / 1350;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  user-select: none;
+  cursor: move;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+}
+
+.name {
+  bottom: 44px;
+  font-size: 18px;
+  font-family: "FFShamelSansBold";
+  line-height: 1;
+}
+
+.title {
+  bottom: 18px;
+  font-size: 14px;
+  font-family: "CoHeadlineRegular";
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .controls {
+    max-width: 100%;
+  }
+
+  .card-wrapper {
+    max-width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
